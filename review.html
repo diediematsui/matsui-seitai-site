@@ -182,7 +182,7 @@
         <div class="hint">サイトに掲載する際、内容の一部を編集させていただく場合があります。</div>
       </div>
 
-      <p class="form-error" id="form-error" hidden>送信に失敗しました。お手数ですが、時間をおいて再度お試しください。</p>
+      <p class="form-error" id="form-error" hidden data-default="送信に失敗しました。お手数ですが、時間をおいて再度お試しください。">送信に失敗しました。お手数ですが、時間をおいて再度お試しください。</p>
 
       <button class="submit-btn" type="submit">口コミを送信する</button>
     </form>
@@ -202,15 +202,22 @@
       e.preventDefault();
       if(errorMsg) errorMsg.hidden = true;
       var body = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', {
+      fetch(window.location.pathname, {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: body
       }).then(function(res){
-        if(!res.ok) throw new Error('submit failed');
+        if(!res.ok){
+          var err = new Error('submit failed');
+          err.status = res.status;
+          throw err;
+        }
         window.location.href = '/review-thanks.html';
-      }).catch(function(){
-        if(errorMsg) errorMsg.hidden = false;
+      }).catch(function(err){
+        if(!errorMsg) return;
+        var detail = err && err.status ? '(エラーコード: ' + err.status + ')' : '(ネットワークエラー)';
+        errorMsg.textContent = errorMsg.getAttribute('data-default') + detail;
+        errorMsg.hidden = false;
       });
     });
   })();
