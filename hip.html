@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>富山市の股関節専門整体｜股関節の痛みのご相談は松井整体院</title>
+<meta name="description" content="富山市で股関節の痛みや違和感にお悩みの方へ。歩行時の股関節の痛み、変形性股関節症、術後のケアなど、股関節に特化して体を評価し、原因を一緒に探る整体院です。どこに相談すればいいか分からない股関節の悩み、まずはお話をお聞かせください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17130f;
+    --bg-2: #1f1a14;
+    --panel: #251f18;
+    --line: #3a3226;
+    --ink: #ece4d6;
+    --ink-dim: #b7ab97;
+    --amber: #d6a04f;
+    --amber-dim: #9c793d;
+    --brick: #a3462c;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    line-height:1.9;
+    letter-spacing:.02em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mincho{font-family:'Shippori Mincho', serif;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+
+  .top-bar{padding:28px 0 0;}
+  .back-link{font-size:.8rem; color:var(--ink-dim); text-decoration:none; letter-spacing:.05em;}
+  .back-link:hover{color:var(--amber);}
+
+  /* HERO */
+  .hip-hero{
+    position:relative;
+    padding:64px 0 88px;
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(214,160,79,.14), transparent 70%),
+      var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:.72rem;
+    letter-spacing:.32em;
+    color:var(--amber);
+    border:1px solid var(--amber-dim);
+    padding:6px 14px;
+    margin-bottom:26px;
+  }
+  .hip-hero h1{
+    font-size:clamp(2rem, 6vw, 3.2rem);
+    font-weight:800;
+    line-height:1.5;
+    letter-spacing:.03em;
+  }
+  .hip-hero h1 span{display:block;}
+  .hip-hero .sub{
+    margin-top:26px;
+    font-size:clamp(.96rem, 2.2vw, 1.05rem);
+    color:var(--ink-dim);
+    max-width:36em;
+  }
+
+  /* SECTION GENERIC */
+  section{padding:88px 0;}
+  .label{
+    font-size:.72rem;
+    letter-spacing:.28em;
+    color:var(--amber);
+    margin-bottom:18px;
+  }
+  h2.headline{
+    font-size:clamp(1.4rem, 4vw, 2rem);
+    font-weight:700;
+    line-height:1.6;
+    margin-bottom:28px;
+  }
+  p.body-text{
+    color:var(--ink-dim);
+    font-size:1rem;
+    max-width:36em;
+  }
+  p.body-text + p.body-text{margin-top:1.4em;}
+
+  /* WORRY LIST */
+  .worry-section{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .worry-list{margin-top:36px; display:flex; flex-direction:column;}
+  .worry-item{
+    display:flex;
+    gap:16px;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+    color:var(--ink);
+    font-size:.98rem;
+  }
+  .worry-item:last-child{border-bottom:1px solid var(--line);}
+  .worry-item .mark{color:var(--amber-dim); font-family:'Shippori Mincho', serif;}
+
+  /* MESSAGE */
+  .message-section{text-align:center;}
+  .message-section .label{display:block;}
+  .message-quote{
+    font-family:'Shippori Mincho', serif;
+    font-size:clamp(1.5rem, 5vw, 2.3rem);
+    line-height:1.7;
+    color:var(--amber);
+    margin:0 auto 32px;
+    max-width:16em;
+  }
+  .message-section .body-text{margin:0 auto; text-align:left;}
+  .message-section .body-text + .body-text{margin-top:1.4em;}
+
+  .note{
+    margin-top:40px;
+    padding:18px 22px;
+    border-left:3px solid var(--brick);
+    background:rgba(163,70,44,.08);
+    font-size:.9rem;
+    color:var(--ink-dim);
+    text-align:left;
+    max-width:36em;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-section{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .testimonial-note{font-size:.86rem; color:var(--ink-dim); margin-bottom:8px;}
+  .testimonial-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  .testimonial-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:32px 28px;
+  }
+  .testimonial-card .quote-mark{font-family:'Shippori Mincho', serif; font-size:2rem; color:var(--amber-dim); line-height:1; margin-bottom:10px;}
+  .testimonial-card .comment{color:var(--ink); font-size:.96rem; line-height:1.9;}
+  .testimonial-card .meta{margin-top:20px; font-size:.78rem; color:var(--ink-dim); letter-spacing:.04em;}
+
+  /* APPROACH MINI */
+  .process-list{margin-top:44px; display:flex; flex-direction:column;}
+  .process-item{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:24px;
+    padding:28px 0;
+    border-top:1px solid var(--line);
+  }
+  .process-item:last-child{border-bottom:1px solid var(--line);}
+  .process-num{font-family:'Shippori Mincho', serif; font-size:1.6rem; color:var(--amber-dim);}
+  .process-item h3{font-size:1.05rem; font-weight:700; margin-bottom:8px;}
+  .process-item p{color:var(--ink-dim); font-size:.94rem;}
+
+  /* CTA */
+  .cta-section{text-align:center; padding:110px 0;}
+  .cta-section h2{
+    font-family:'Shippori Mincho', serif;
+    font-size:clamp(1.5rem, 5vw, 2.2rem);
+    margin-bottom:20px;
+  }
+  .cta-section .body-text{margin:0 auto 34px; max-width:30em;}
+  .line-btn{
+    display:inline-block;
+    background:var(--amber);
+    color:#17130f;
+    font-weight:700;
+    padding:18px 52px;
+    font-size:1.02rem;
+    letter-spacing:.06em;
+    text-decoration:none;
+    border-radius:2px;
+  }
+  .line-btn:hover{background:#e2ac59;}
+
+  footer{
+    text-align:center;
+    padding:36px 0 60px;
+    font-size:.78rem;
+    color:var(--ink-dim);
+    opacity:.6;
+  }
+  footer a{color:var(--amber-dim); text-decoration:underline; opacity:1;}
+  footer .footer-links{margin-top:10px;}
+
+  @media(max-width:640px){
+    section{padding:64px 0;}
+    .testimonial-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="wrap">
+    <a class="back-link" href="/index.html">← 松井整体院トップへ</a>
+  </div>
+</div>
+
+<section class="hip-hero">
+  <div class="wrap">
+    <div class="eyebrow">TOYAMA · 股関節でお悩みの方へ</div>
+    <h1 class="mincho">
+      <span>その股関節の痛み、</span>
+      <span>どこに相談すればいいか</span>
+      <span>分からない方へ。</span>
+    </h1>
+    <p class="sub">整形外科では「様子を見ましょう」と言われたきり。整骨院でその場は楽になっても、しばらくするとまた痛みが戻ってくる。そんな股関節の悩みを、まずは一緒に整理するところから始めませんか。</p>
+  </div>
+</section>
+
+<section class="worry-section">
+  <div class="wrap">
+    <div class="label">SUCH AS...</div>
+    <h2 class="headline">一人で抱えていませんか、<br>その股関節の悩み。</h2>
+    <div class="worry-list">
+      <div class="worry-item"><span class="mark">―</span><span>歩き出しや、階段の上り下りで股関節に痛みが走る</span></div>
+      <div class="worry-item"><span class="mark">―</span><span>車の乗り降りや、立ち座りのたびに股関節・膝がつらい</span></div>
+      <div class="worry-item"><span class="mark">―</span><span>病院で「年齢的なもの」「経過観察」と言われたきり、何もしていない</span></div>
+      <div class="worry-item"><span class="mark">―</span><span>どこに相談すればいいのか分からず、痛みを我慢してしまっている</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="message-section">
+  <div class="wrap">
+    <div class="label">THINK</div>
+    <p class="message-quote mincho">半月板がなくなっても、<br>筋肉は残っている。</p>
+    <p class="body-text">股関節や膝の状態は、人によって様々です。すり減ってしまった部分、失われてしまった部分に目を向ければ、不安になるのも当然だと思います。</p>
+    <p class="body-text">ですが、たとえ半月板がなくなっていたとしても、その股関節を支える筋肉は、今も残っています。なくなったものではなく、今あるものに目を向け、それをしっかり活かせる状態に整えていく。それが、私たちの考え方です。</p>
+    <div class="note">今、この悩みに気づいて向き合おうとしているこの瞬間が、あなたにとってのベストタイミングです。何もしなければ、状態は今のまま。今日から、今ある部分を活かす方法を一緒に探していきましょう。</div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="wrap">
+    <div class="label">VOICE</div>
+    <h2 class="headline">以前の店舗でいただいたお声</h2>
+    <p class="testimonial-note">屋号を変更する以前の店舗で、実際にいただいたお客様の声です。</p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p class="comment">車の乗り降りにも辛かった膝と股関節、通ってから随分と楽になりました。</p>
+        <div class="meta">股関節・膝のお悩みでご来院された方</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p class="comment">長年ひどい腰痛に悩まされ、こちらの整体院で施術を受けてかなり楽になりました。</p>
+        <div class="meta">長年の腰痛でお悩みだった方</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label">APPROACH</div>
+    <h2 class="headline">股関節も、揉むのではなく、<br>正しく動かせる状態へ。</h2>
+    <p class="body-text">股関節の不調は、その場を揉んでもらって楽になるだけでは、根本的には変わりません。大事なのは、日常の中で股関節に負担をかけない、正しい体の使い方を取り戻すことです。</p>
+
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num">01</div>
+        <div>
+          <h3>評価する</h3>
+          <p>今の股関節・骨盤・膝の状態を、姿勢や歩き方の基準に照らして細かくチェックします。</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">02</div>
+        <div>
+          <h3>仮説を立てる</h3>
+          <p>その状態から、痛みや違和感の原因はどこにあるのか。仮説を立てます。</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">03</div>
+        <div>
+          <h3>試す・検証する</h3>
+          <p>仮説に対する施術を行い、結果を見て、また次の仮説を立てる。この繰り返しを、あなたと一緒に進めていきます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <h2 class="mincho">その股関節の悩み、<br>まずは体の状態から。</h2>
+    <p class="body-text">一人で抱え込まず、まずはお話をお聞かせください。</p>
+    <a class="line-btn" href="https://lin.ee/ozaeHCLi" target="_blank" rel="noopener">公式LINEで予約する</a>
+  </div>
+</section>
+
+<footer>
+  松井整体院
+  <div class="footer-links"><a href="/index.html">トップへ戻る</a> ／ <a href="/review-wall.html">お客様の声</a> ／ <a href="/review.html">口コミを投稿する</a></div>
+</footer>
+
+</body>
+</html>
