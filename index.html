@@ -113,6 +113,37 @@
   .process-item h3{font-size:1.05rem; font-weight:700; margin-bottom:8px;}
   .process-item p{color:var(--ink-dim); font-size:.94rem;}
 
+  /* PROCESS VIDEO */
+  .video-heading{font-size:1.05rem; font-weight:700; margin-top:48px; margin-bottom:20px;}
+  .video-frame{
+    position:relative;
+    aspect-ratio:16/9;
+    border:1px dashed var(--line);
+    border-radius:4px;
+    background:var(--panel);
+    overflow:hidden;
+  }
+  .video-frame video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+    background:#000;
+  }
+  .video-placeholder{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--ink-dim);
+    font-size:.82rem;
+    letter-spacing:.2em;
+    pointer-events:none;
+  }
+  .video-caption{margin-top:20px; font-size:.85rem; color:var(--ink-dim);}
+
   .note{
     margin-top:40px;
     padding:18px 22px;
@@ -337,6 +368,16 @@
         </div>
       </div>
     </div>
+
+    <h3 class="video-heading">実際の施術の様子</h3>
+    <div class="video-frame">
+      <video class="approach-video" controls playsinline>
+        <!-- 動画を追加する場合は、ここに <source src="動画のURL" type="video/mp4"> を追加してください -->
+      </video>
+      <!-- 動画のsourceを追加したら、下のvideo-placeholderは削除してください -->
+      <div class="video-placeholder">準備中</div>
+    </div>
+    <p class="video-caption">ストレッチや関節への施術、体の動かし方の指導などを組み合わせながら、一人ひとりの体に合わせて施術を行っています。</p>
 
     <div class="note">※体に力が入るほどの強い痛みは、正しく施術を進める妨げになります。我慢せず、そのまま教えてください。</div>
   </div>
