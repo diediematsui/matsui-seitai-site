@@ -83,6 +83,7 @@
     padding:30px 26px;
   }
   .review-card .stars{color:var(--amber); font-size:.95rem; letter-spacing:.18em; margin-bottom:16px;}
+  .review-card .source{color:var(--amber); font-size:.78rem; letter-spacing:.1em; margin-bottom:16px;}
   .review-card .comment{color:var(--ink); font-size:.94rem; line-height:1.9;}
   .review-card .meta{margin-top:20px; font-size:.78rem; color:var(--ink-dim); letter-spacing:.04em;}
 
@@ -173,7 +174,6 @@
       <!--
         承認した口コミを追加する場合は、下記のカードをコピーして
         この <div class="review-grid"> の中に追加してください。
-        追加したら、下の review-empty (準備中メッセージ) は削除してください。
 
         <div class="review-card">
           <div class="stars">★★★★★</div>
@@ -181,9 +181,17 @@
           <div class="meta">お名前(例:M.Kさん)・ご利用メニュー(例:全身整体)</div>
         </div>
       -->
+      <div class="review-card">
+        <div class="source">Googleの口コミより</div>
+        <p class="comment">20代になり、肩と首の凝りがずっと辛くて...その場しのぎではなく根本から整えたいと思って伺いました。完全予約制の貸切空間なので、周りを気にせずリラックスできたのがすごく良かったです!最初にしっかり状態をみてもらえたのですが、「普段こういう姿勢が多いですよね?」と癖をズバリ言い当てられてびっくり。</p>
+        <div class="meta">ご来院者様</div>
+      </div>
+      <div class="review-card">
+        <div class="source">Googleの口コミより</div>
+        <p class="comment">2年前は肩や足の痛みに悩んでいましたが整形外科では年齢のせいと言われるだけで...トータルで7キロ程減量できたうえに自分でジムに通い、体を動かせるようになったことが本当に嬉しいです。</p>
+        <div class="meta">ご来院者様</div>
+      </div>
     </div>
-
-    <p class="review-empty" id="review-empty">ただいま口コミを準備中です。近日公開予定です。</p>
   </div>
 </section>
 
