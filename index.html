@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>松井整体院</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -253,7 +253,7 @@
   footer .footer-links{margin-top:10px;}
 
   /* STICKY BOOKING BAR */
-  body.has-sticky-bar{padding-bottom:78px;}
+  body.has-sticky-bar{padding-bottom:calc(78px + env(safe-area-inset-bottom, 0px));}
   .sticky-bar{
     position:fixed;
     left:0;
@@ -264,12 +264,14 @@
     align-items:center;
     justify-content:center;
     gap:14px;
-    padding:14px 44px 14px 20px;
+    padding:14px 44px calc(14px + env(safe-area-inset-bottom, 0px)) 20px;
     background:rgba(31,26,20,.96);
     -webkit-backdrop-filter:blur(6px);
     backdrop-filter:blur(6px);
     border-top:1px solid var(--line);
     box-shadow:0 -6px 18px rgba(0,0,0,.35);
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0);
   }
   .sticky-bar .sticky-label{font-size:.82rem; color:var(--ink-dim); white-space:nowrap;}
   .sticky-bar .line-btn-sm{
@@ -308,10 +310,10 @@
     section{padding:64px 0;}
     .profile-grid{grid-template-columns:1fr;}
     .profile-grid img{max-height:280px;}
-    .sticky-bar{padding:12px 40px 12px 14px; gap:10px;}
+    .sticky-bar{padding:12px 40px calc(12px + env(safe-area-inset-bottom, 0px)) 14px; gap:10px;}
     .sticky-bar .sticky-label{display:none;}
     .sticky-bar .line-btn-sm{flex:1; text-align:center;}
-    body.has-sticky-bar{padding-bottom:68px;}
+    body.has-sticky-bar{padding-bottom:calc(68px + env(safe-area-inset-bottom, 0px));}
     .map-embed{max-width:100%;}
     .map-embed iframe{height:240px;}
     .process-num{font-size:1.25rem;}
