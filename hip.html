@@ -101,6 +101,13 @@
   .ba-explain{margin-top:48px; padding-top:40px; border-top:1px solid var(--line);}
   .ba-explain h3{font-size:1.05rem; font-weight:700; margin-bottom:18px; color:var(--ink);}
 
+  /* TREATMENT */
+  .treatment-section{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .treatment-shot{margin-top:40px;}
+  .treatment-shot img{width:100%; height:auto; display:block; border:1px solid var(--line);}
+  .treatment-shot.is-close img{max-width:520px;}
+  .treatment-cap{margin-top:16px; font-size:.9rem; color:var(--ink-dim);}
+
   /* WORRY LIST */
   .worry-section{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   .worry-list{margin-top:36px; display:flex; flex-direction:column;}
@@ -353,6 +360,38 @@
           <p>仮説に対する施術を行い、結果を見て、また次の仮説を立てる。この繰り返しを、あなたと一緒に進めていきます。</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="treatment-section">
+  <div class="wrap">
+    <div class="label">TREATMENT</div>
+    <h2 class="headline">実際の施術例</h2>
+    <p class="body-text">股関節まわりの動きを確認しながら、その方に合わせて進めていきます。</p>
+
+    <div class="treatment-shot">
+      <picture>
+        <source type="image/webp" srcset="/images/v2-hip-raise.webp">
+        <img src="/images/v2-hip-raise.webp" width="1600" height="900" loading="lazy" decoding="async" alt="仰向けの状態で脚を持ち上げ、股関節が曲がる範囲を確認している様子">
+      </picture>
+      <p class="treatment-cap">仰向けで脚を持ち上げ、股関節がどこまで曲がるか、どこで動きが止まるかを確認します。</p>
+    </div>
+
+    <div class="treatment-shot">
+      <picture>
+        <source type="image/webp" srcset="/images/v2-ankle.webp">
+        <img src="/images/v2-ankle.webp" width="1600" height="900" loading="lazy" decoding="async" alt="足首から下肢にかけて手を添え、脚全体の動きを確認している様子">
+      </picture>
+      <p class="treatment-cap">股関節の動きは、足首から下の使い方にも影響されます。脚全体のつながりを見ていきます。</p>
+    </div>
+
+    <div class="treatment-shot is-close">
+      <picture>
+        <source type="image/webp" srcset="/images/treatment-hip-close.webp">
+        <img src="/images/treatment-hip-close.webp" width="850" height="720" loading="lazy" decoding="async" alt="膝を曲げた状態で脚を支え、股関節まわりの動きを近くで確認している様子">
+      </picture>
+      <p class="treatment-cap">膝を曲げた状態から、股関節まわりが硬くなっている方向を探していきます。</p>
     </div>
   </div>
 </section>
