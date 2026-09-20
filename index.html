@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>松井整体院</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://starlit-salmiakki-306d95.netlify.app/">
+<meta property="og:title" content="松井整体院｜富山市・完全予約制">
+<meta property="og:description" content="毎回、体を評価し、原因を仮説立て、対策を検証する。あなたの体の専属研究員になる。富山市の完全予約制の整体院です。">
+<meta property="og:image" content="https://starlit-salmiakki-306d95.netlify.app/images/og-image-v3.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -51,41 +59,6 @@
   .hero .wrap{position:relative;}
   .solo-shot img{width:100%; height:auto; display:block;}
 
-  /* FLOW */
-  .flow-item{margin-top:56px;}
-  .flow-item img{width:100%; height:auto; display:block; border:1px solid var(--line);}
-  .flow-item.is-tall img{max-width:620px;}
-  .flow-item h3{font-size:1.15rem; font-weight:700; margin:24px 0 12px;}
-  .flow-item p{color:var(--ink-dim); font-size:.96rem; max-width:36em;}
-  .flow-close{margin-top:52px; padding-top:32px; border-top:1px solid var(--line); font-size:1rem;}
-  .eyebrow{
-    display:inline-block;
-    font-size:.72rem;
-    letter-spacing:.32em;
-    color:var(--amber);
-    border:1px solid var(--amber-dim);
-    padding:6px 14px;
-    margin-bottom:26px;
-  }
-  .hero h1{
-    font-size:clamp(2.6rem, 8vw, 4.6rem);
-    font-weight:800;
-    line-height:1.25;
-    letter-spacing:.04em;
-  }
-  .hero h1 span{display:block;}
-  .hero .sub{
-    margin-top:22px;
-    font-size:clamp(.98rem, 2.4vw, 1.15rem);
-    color:var(--ink-dim);
-    max-width:34em;
-  }
-  .hero .shopname{
-    margin-top:36px;
-    font-size:.8rem;
-    color:var(--ink-dim);
-    letter-spacing:.1em;
-  }
 
   /* SECTION GENERIC */
   section{padding:96px 0;}
@@ -126,6 +99,10 @@
   .process-num{font-family:'Shippori Mincho', serif; font-size:1.6rem; color:var(--amber-dim);}
   .process-item h3{font-size:1.05rem; font-weight:700; margin-bottom:8px;}
   .process-item p{color:var(--ink-dim); font-size:.94rem;}
+  .process-photo{margin-top:18px;}
+  .process-photo img{width:100%; height:auto; display:block; border:1px solid var(--line);}
+  .process-photo.is-tall img{max-width:620px;}
+  .process-close{margin-top:40px; padding-top:28px; border-top:1px solid var(--line); font-size:1rem;}
 
   /* PROCESS VIDEO */
   .video-heading{font-size:1.05rem; font-weight:700; margin-top:48px; margin-bottom:20px;}
@@ -331,6 +308,7 @@
     .map-embed{max-width:100%;}
     .map-embed iframe{height:240px;}
     .process-num{font-size:1.25rem;}
+    .process-photo{margin-left:-88px;}
     .ba-headline span{display:block;}
     .ba-headline .ba-br{display:none;}
     .hero{min-height:70vh;}
@@ -362,42 +340,6 @@
   </picture>
 </div>
 
-<section>
-  <div class="wrap">
-    <div class="label">FLOW</div>
-    <h2 class="headline">施術の流れ</h2>
-
-    <div class="flow-item">
-      <picture>
-        <source type="image/webp" srcset="/images/v2-explain-screen.webp">
-        <img src="/images/v2-explain-screen.webp" width="1600" height="900" loading="lazy" decoding="async" alt="施術者が立って、撮影した映像をスマートフォンの画面で来院者に見せている様子">
-      </picture>
-      <h3>評価する</h3>
-      <p>まず、今の姿勢や動きを撮影して確認します。その場で一緒に画面を見ながら、どこが動いていて、どこが止まっているのかを共有します。言葉で説明を受けるより、自分の目で見たほうが納得できるからです。</p>
-    </div>
-
-    <div class="flow-item is-tall">
-      <picture>
-        <source type="image/webp" srcset="/images/v2-assess-close.webp">
-        <img src="/images/v2-assess-close.webp" width="1400" height="1307" loading="lazy" decoding="async" alt="施術者が膝を曲げた脚に手を添えて、動きを近くで確認している様子">
-      </picture>
-      <h3>仮説を立てる</h3>
-      <p>見えた状態から、原因がどこにあるのかを考えます。痛みが出ている場所そのものではなく、その手前で動きを止めている場所を探します。関節をひとつずつ動かしながら、仮説を絞り込んでいきます。</p>
-    </div>
-
-    <div class="flow-item">
-      <picture>
-        <source type="image/webp" srcset="/images/v2-counseling.webp">
-        <img src="/images/v2-counseling.jpg" width="1080" height="608" loading="lazy" decoding="async" alt="施術者と来院者が向かい合って座り、話している様子">
-      </picture>
-      <h3>今後のセルフケアを決める</h3>
-      <p>施術で変わった状態を、どうすれば日常で保てるか。生活の中でできることを一緒に決めて、次回までの宿題にします。難しいことではなく、続けられる範囲のものをお渡しします。</p>
-    </div>
-
-    <p class="flow-close">これを毎回、最初から繰り返します。</p>
-  </div>
-</section>
-
 <section class="ba-section">
   <div class="wrap">
     <div class="label">BEFORE / AFTER</div>
@@ -421,6 +363,12 @@
         <div>
           <h3>評価する</h3>
           <p>まず今の体の状態を、正しい姿勢・歩き方・使い方の基準に照らして細かくチェックします。</p>
+        <div class="process-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/v2-explain-screen.webp">
+            <img src="/images/v2-explain-screen.webp" width="1600" height="900" loading="lazy" decoding="async" alt="施術者が立って、撮影した映像をスマートフォンの画面で来院者に見せている様子">
+          </picture>
+        </div>
         </div>
       </div>
       <div class="process-item">
@@ -428,6 +376,12 @@
         <div>
           <h3>仮説を立てる</h3>
           <p>その状態から、不調の原因はどこにあるのか。仮説を立てます。</p>
+        <div class="process-photo is-tall">
+          <picture>
+            <source type="image/webp" srcset="/images/v2-assess-close.webp">
+            <img src="/images/v2-assess-close.webp" width="1400" height="1307" loading="lazy" decoding="async" alt="施術者が膝を曲げた脚に手を添えて、動きを近くで確認している様子">
+          </picture>
+        </div>
         </div>
       </div>
       <div class="process-item">
@@ -435,6 +389,12 @@
         <div>
           <h3>試す・検証する</h3>
           <p>仮説に対する施術を行い、結果を見て、また次の仮説を立てる。この繰り返しを、あなたと一緒に。お互いが研究者になったつもりで、体のことを正しく理解していきます。</p>
+        <div class="process-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/v2-counseling.webp">
+            <img src="/images/v2-counseling.jpg" width="1080" height="608" loading="lazy" decoding="async" alt="施術者と来院者が向かい合って座り、話している様子">
+          </picture>
+        </div>
         </div>
       </div>
     </div>
@@ -450,6 +410,8 @@
     <p class="video-caption">ストレッチや関節への施術、体の動かし方の指導などを組み合わせながら、一人ひとりの体に合わせて施術を行っています。</p>
 
     <div class="note">※体に力が入るほどの強い痛みは、正しく施術を進める妨げになります。我慢せず、そのまま教えてください。</div>
+
+    <p class="process-close">これを毎回、最初から繰り返します。</p>
   </div>
 </section>
 
