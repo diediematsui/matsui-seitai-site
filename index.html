@@ -255,6 +255,20 @@
   .price-card.trial .plan{color:var(--brick);}
   .price-card.trial .amount{color:var(--ink);}
   .price-card{background:var(--bg-2); padding:36px 30px;}
+  .price-card.featured{box-shadow:inset 0 0 0 1px var(--amber-dim);}
+  .price-badge{
+    display:inline-block;
+    background:var(--amber);
+    color:#17130f;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    padding:4px 12px;
+    border-radius:2px;
+    margin-bottom:16px;
+  }
+  .price-card .ref{font-size:.82rem; color:var(--ink-dim); margin-bottom:6px;}
+  .price-card .ref s{color:var(--ink-dim);}
   .price-card .plan{font-size:.85rem; color:var(--ink-dim); letter-spacing:.1em; margin-bottom:14px;}
   .price-card .amount{font-family:'Shippori Mincho', serif; font-size:2.2rem; color:var(--amber);}
   .price-card .amount small{font-size:1rem; color:var(--ink-dim); margin-left:4px;}
@@ -543,7 +557,8 @@
     <div class="label">MENU</div>
     <h2 class="headline">メニュー（税込）</h2>
     <div class="price-grid with-trial">
-      <div class="price-card">
+      <div class="price-card featured">
+        <div class="price-badge">人気No.1</div>
         <div class="plan">ロングコース</div>
         <div class="amount">¥12,000<small>/ 90分</small></div>
         <div class="desc">全身の調整に加え、正しい体の使い方の練習まで含みます。</div>
@@ -555,6 +570,7 @@
       </div>
       <div class="price-card trial">
         <div class="plan">初回限定</div>
+        <div class="ref">90分のコース <s>¥12,000</s> のところ</div>
         <div class="amount">¥5,000<small>/ 約90分</small></div>
         <div class="desc">まずはあなたの体を評価し、原因の仮説を立てるところから。継続を検討したい方向けの入り口です。</div>
       </div>
