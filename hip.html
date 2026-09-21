@@ -166,7 +166,17 @@
   }
   .testimonial-card .quote-mark{font-family:'Shippori Mincho', serif; font-size:2rem; color:var(--amber-dim); line-height:1; margin-bottom:10px;}
   .testimonial-card .comment{color:var(--ink); font-size:.96rem; line-height:1.9;}
+  .testimonial-card .comment + .comment{margin-top:1.1em;}
   .testimonial-card .meta{margin-top:20px; font-size:.78rem; color:var(--ink-dim); letter-spacing:.04em;}
+  .testimonial-grid.is-single{grid-template-columns:1fr;}
+  .voice-subhead{
+    margin-top:56px;
+    padding-top:40px;
+    border-top:1px solid var(--line);
+    font-size:1rem;
+    font-weight:700;
+    margin-bottom:8px;
+  }
 
   /* APPROACH MINI */
   .process-list{margin-top:44px; display:flex; flex-direction:column;}
@@ -315,7 +325,20 @@
 <section class="testimonial-section">
   <div class="wrap">
     <div class="label">VOICE</div>
-    <h2 class="headline">以前の店舗でいただいたお声</h2>
+    <h2 class="headline">股関節でいただいたお声</h2>
+    <div class="testimonial-grid is-single">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p class="comment">右股関節に1日数回あった激痛が、一度の施術後は約2週間まったく出ませんでした。</p>
+        <p class="comment">以前は、立ち上がる時や朝起き上がる時、歩き始め、しばらく歩いた時などに右の股関節へ突然激痛が走ることがあり、1日に数回は必ず起きていました。</p>
+        <p class="comment">松井先生の施術を一度受けてからは、それが約2週間まったく出なかったので、自分でもかなり変化を感じました。</p>
+        <p class="comment">身体の状態もしっかり見ながら、なぜ痛みが出ているのかを丁寧に説明してくれるので、安心して施術を受けられました。</p>
+        <p class="comment">松井先生は特に股関節まわりの不調に力を入れているそうなので、股関節の痛みや動かしづらさで長く悩んでいる方や、「どこに相談したらいいんだろう」と困っている方には、一度相談してみてほしいと思います。</p>
+        <div class="meta">股関節のお悩みでご来院された方(Googleの口コミより)</div>
+      </div>
+    </div>
+
+    <h3 class="voice-subhead">以前の店舗でいただいたお声</h3>
     <p class="testimonial-note">屋号を変更する以前の店舗で、実際にいただいたお客様の声です。</p>
     <div class="testimonial-grid">
       <div class="testimonial-card">
