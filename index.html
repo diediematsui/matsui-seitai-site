@@ -385,13 +385,10 @@
     section{padding:64px 0;}
     .profile-grid{grid-template-columns:1fr;}
     .profile-grid img{max-height:280px;}
-    /* Netlifyが右下に固定挿入するバッジ(約35px高)と重ならないよう下に余白を確保。
-       Netlify側でバッジを非表示にしたら 12px に戻してよい。 */
-    .sticky-bar{padding:12px 40px calc(58px + env(safe-area-inset-bottom, 0px)) 14px; gap:10px;}
-    .sticky-bar-close{top:22px; transform:none;}
+    .sticky-bar{padding:12px 40px calc(12px + env(safe-area-inset-bottom, 0px)) 14px; gap:10px;}
     .sticky-bar .sticky-label{display:none;}
     .sticky-bar .line-btn-sm{flex:1; text-align:center;}
-    body.has-sticky-bar{padding-bottom:calc(114px + env(safe-area-inset-bottom, 0px));}
+    body.has-sticky-bar{padding-bottom:calc(68px + env(safe-area-inset-bottom, 0px));}
     .interior-grid{grid-template-columns:1fr;}
     .route-btn{display:block; text-align:center;}
     .process-num{font-size:1.25rem;}
