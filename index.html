@@ -153,30 +153,71 @@
   .video-frame{
     position:relative;
     aspect-ratio:16/9;
-    border:1px dashed var(--line);
+    border:1px solid var(--line);
     border-radius:4px;
     background:var(--panel);
     overflow:hidden;
   }
-  .video-frame video{
+  .video-frame iframe{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
+    border:0;
     display:block;
     background:#000;
   }
-  .video-placeholder{
+  /* クリックされるまでYouTubeを読み込まないサムネイル表示 */
+  .video-play{
     position:absolute;
     inset:0;
+    width:100%;
+    height:100%;
+    padding:0;
+    border:0;
+    background:none;
+    cursor:pointer;
+    display:block;
+  }
+  .video-play img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .video-play::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(23,19,15,.32);
+  }
+  .video-play-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+    width:74px;
+    height:74px;
+    border-radius:50%;
+    background:rgba(23,19,15,.72);
+    border:1px solid var(--amber);
     display:flex;
     align-items:center;
     justify-content:center;
-    color:var(--ink-dim);
-    font-size:.82rem;
-    letter-spacing:.2em;
-    pointer-events:none;
+    transition:background .2s ease;
   }
+  .video-play-icon::after{
+    content:"";
+    margin-left:5px;
+    border-style:solid;
+    border-width:11px 0 11px 18px;
+    border-color:transparent transparent transparent var(--amber);
+  }
+  .video-play:hover .video-play-icon,
+  .video-play:focus-visible .video-play-icon{background:rgba(23,19,15,.92);}
   .video-caption{margin-top:20px; font-size:.85rem; color:var(--ink-dim);}
 
   .note{
@@ -432,12 +473,11 @@
     </div>
 
     <h3 class="video-heading">実際の施術の様子</h3>
-    <div class="video-frame">
-      <video class="approach-video" controls playsinline>
-        <!-- 動画を追加する場合は、ここに <source src="動画のURL" type="video/mp4"> を追加してください -->
-      </video>
-      <!-- 動画のsourceを追加したら、下のvideo-placeholderは削除してください -->
-      <div class="video-placeholder">準備中</div>
+    <div class="video-frame" data-video-id="3E8rfn0q7rY" data-video-title="実際の施術の様子">
+      <button class="video-play" type="button" aria-label="「実際の施術の様子」の動画を再生する">
+        <img src="/images/v2-hands-neck-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="">
+        <span class="video-play-icon" aria-hidden="true"></span>
+      </button>
     </div>
     <p class="video-caption">ストレッチや関節への施術、体の動かし方の指導などを組み合わせながら、一人ひとりの体に合わせて施術を行っています。</p>
 
@@ -615,6 +655,24 @@
       bar.style.display = 'none';
       document.body.classList.remove('has-sticky-bar');
       try{ sessionStorage.setItem('lineBarClosed', '1'); }catch(e){}
+    });
+  })();
+
+  /* 動画枠: クリックされて初めてYouTubeプレーヤーを読み込む */
+  (function(){
+    document.querySelectorAll('.video-frame[data-video-id]').forEach(function(frame){
+      var btn = frame.querySelector('.video-play');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        var id = frame.getAttribute('data-video-id');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + id +
+          '?autoplay=1&rel=0&playsinline=1';
+        iframe.title = frame.getAttribute('data-video-title') || '';
+        iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        frame.replaceChild(iframe, btn);
+      }, { once: true });
     });
   })();
 </script>
