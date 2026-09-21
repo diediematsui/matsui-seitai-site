@@ -55,6 +55,47 @@
     max-width:34em;
   }
 
+  /* Googleクチコミへの導線 */
+  .google-block{
+    margin-top:36px;
+    padding:30px 28px;
+    border:1px solid var(--amber-dim);
+    border-radius:4px;
+    background:var(--panel);
+  }
+  .google-title{
+    font-family:'Shippori Mincho', serif;
+    font-size:1.15rem;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .google-lead{font-size:.92rem; color:var(--ink-dim); margin-bottom:24px;}
+  .google-btn{
+    display:inline-block;
+    background:var(--amber);
+    color:#17130f;
+    font-weight:700;
+    padding:16px 44px;
+    font-size:.98rem;
+    letter-spacing:.04em;
+    text-decoration:none;
+    border-radius:2px;
+  }
+  .google-btn:hover{background:#e2ac59;}
+  .google-note{margin-top:18px; font-size:.8rem; color:var(--ink-dim); opacity:.85;}
+
+  .alt-block{
+    margin-top:64px;
+    padding-top:44px;
+    border-top:1px solid var(--line);
+  }
+  .alt-title{
+    font-family:'Shippori Mincho', serif;
+    font-size:1.05rem;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+
   .note{
     margin-top:32px;
     padding:18px 22px;
@@ -127,6 +168,8 @@
   @media(max-width:640px){
     section{padding:40px 0 64px;}
     .submit-btn{width:100%; text-align:center;}
+    .google-block{padding:24px 20px;}
+    .google-btn{display:block; text-align:center; padding:16px 20px;}
   }
 </style>
 </head>
@@ -144,9 +187,21 @@
     <h1 class="headline">口コミを投稿する</h1>
     <p class="body-text">施術を受けてのご感想をお聞かせください。いただいた内容は今後お越しになる方の参考にさせていただきます。</p>
 
-    <div class="note">
-      いただいた口コミは自動では公開されません。内容を確認したうえで、順次サイトに手動で掲載させていただきます。掲載までお時間をいただく場合がありますので、あらかじめご了承ください。
+    <div class="google-block">
+      <h2 class="google-title">Googleに口コミを書く</h2>
+      <p class="google-lead">Googleマップの松井整体院のページが開きます。星の数を選んで、そのままご感想を書いていただけます。</p>
+      <!-- 投稿リンク: Googleビジネスプロフィールの「クチコミを増やす」で発行される公式リンク(https://g.page/r/.../review)に差し替え可能です -->
+      <a class="google-btn" href="https://search.google.com/local/writereview?placeid=ChIJHWbMGLyR918R3xAVZbW-OAA" target="_blank" rel="noopener">Googleで口コミを書く</a>
+      <p class="google-note">Googleアカウントでのログインが必要です。投稿された内容は、そのままGoogleマップ上に公開されます。</p>
     </div>
+
+    <div class="alt-block">
+      <h2 class="alt-title">公開せずに、直接感想を送る</h2>
+      <p class="body-text">Googleアカウントをお持ちでない方や、公開せずにご感想をお伝えしたい方は、こちらのフォームをご利用ください。</p>
+
+      <div class="note">
+        いただいた口コミは自動では公開されません。内容を確認したうえで、順次サイトに手動で掲載させていただきます。掲載までお時間をいただく場合がありますので、あらかじめご了承ください。
+      </div>
 
     <form id="review-form" name="review" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/review-thanks.html">
       <input type="hidden" name="form-name" value="review" />
@@ -186,6 +241,7 @@
 
       <button class="submit-btn" type="submit">口コミを送信する</button>
     </form>
+    </div>
   </div>
 </section>
 
