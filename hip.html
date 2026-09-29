@@ -2,11 +2,12 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>富山市の股関節専門整体｜股関節の痛みのご相談は松井整体院</title>
 <meta name="description" content="富山市で股関節の痛みや違和感にお悩みの方へ。歩行時の股関節の痛み、変形性股関節症、術後のケアなど、股関節に特化して体を評価し、原因を一緒に探る整体院です。どこに相談すればいいか分からない股関節の悩み、まずはお話をお聞かせください。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/cta-bar.css">
 <style>
   :root{
     --bg: #17130f;
@@ -195,6 +196,33 @@
   .process-item p{color:var(--ink-dim); font-size:.94rem;}
 
   /* CTA */
+  /* MENU */
+  .pricing-section{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .price-grid{margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line);}
+  .price-grid.with-trial{grid-template-columns:1fr 1fr 1fr;}
+  .price-card.trial .plan{color:var(--brick);}
+  .price-card.trial .amount{color:var(--ink);}
+  .price-card{background:var(--bg-2); padding:36px 30px;}
+  .price-card.featured{box-shadow:inset 0 0 0 1px var(--amber-dim);}
+  .price-badge{
+    display:inline-block;
+    background:var(--amber);
+    color:#17130f;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    padding:4px 12px;
+    border-radius:2px;
+    margin-bottom:16px;
+  }
+  .price-card .ref{font-size:.82rem; color:var(--ink-dim); margin-bottom:6px;}
+  .price-card .ref s{color:var(--ink-dim);}
+  .price-card .plan{font-size:.85rem; color:var(--ink-dim); letter-spacing:.1em; margin-bottom:14px;}
+  .price-card .amount{font-family:'Shippori Mincho', serif; font-size:2.2rem; color:var(--amber);}
+  .price-card .amount small{font-size:1rem; color:var(--ink-dim); margin-left:4px;}
+  .price-card .desc{margin-top:14px; font-size:.86rem; color:var(--ink-dim);}
+  .price-foot{margin-top:18px; font-size:.78rem; color:var(--ink-dim);}
+
   .cta-section{text-align:center; padding:110px 0;}
   .cta-section h2{
     font-family:'Shippori Mincho', serif;
@@ -228,6 +256,7 @@
   @media(max-width:640px){
     section{padding:64px 0;}
     .testimonial-grid{grid-template-columns:1fr;}
+    .price-grid, .price-grid.with-trial{grid-template-columns:1fr;}
     .hip-hero h1{font-size:1.5rem;}
   }
 </style>
@@ -419,6 +448,34 @@
   </div>
 </section>
 
+<section class="pricing-section">
+  <div class="wrap">
+    <div class="label">MENU</div>
+    <h2 class="headline">メニュー（税込）</h2>
+    <p class="body-text">はじめての方は、初回限定のコースからお試しいただけます。股関節の状態を評価し、原因の仮説を立てるところまでを、約90分かけて行います。</p>
+    <div class="price-grid with-trial">
+      <div class="price-card featured">
+        <div class="price-badge">人気No.1</div>
+        <div class="plan">ロングコース</div>
+        <div class="amount">¥12,000<small>/ 90分</small></div>
+        <div class="desc">通常コースに＋2,000円で、時間は30分長く。全身の調整に加え、正しい体の使い方の練習まで含みます。</div>
+      </div>
+      <div class="price-card">
+        <div class="plan">通常</div>
+        <div class="amount">¥10,000<small>/ 60分</small></div>
+        <div class="desc">全身の状態を評価し、原因の仮説を立てながら調整します。</div>
+      </div>
+      <div class="price-card trial">
+        <div class="plan">初回限定</div>
+        <div class="ref">90分のコース <s>¥12,000</s> のところ</div>
+        <div class="amount">¥5,000<small>/ 約90分</small></div>
+        <div class="desc">まずはあなたの体を評価し、原因の仮説を立てるところから。継続を検討したい方向けの入り口です。</div>
+      </div>
+    </div>
+    <p class="price-foot">その他のメニューは公式LINEでご案内しています。</p>
+  </div>
+</section>
+
 <section class="cta-section">
   <div class="wrap">
     <h2 class="mincho">その股関節の悩み、<br>まずは体の状態から。</h2>
@@ -431,6 +488,8 @@
   松井整体院
   <div class="footer-links"><a href="/index.html">トップへ戻る</a> ／ <a href="/access.html">道順を見る</a> ／ <a href="/review-wall.html">お客様の声</a> ／ <a href="/review.html">口コミを投稿する</a></div>
 </footer>
+
+<script src="/assets/cta-bar.js" defer></script>
 
 </body>
 </html>
