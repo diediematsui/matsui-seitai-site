@@ -1,0 +1,91 @@
+/* ============================================================
+   全ページ共通の下部固定CTA
+   マークアップは assets/cta-bar.js が挿入します。
+   文言・リンク先を変える場合は cta-bar.js を編集してください。
+   ============================================================ */
+.cta-bar{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+  background:rgba(31,26,20,.96);
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+  border-top:1px solid #3a3226;
+  box-shadow:0 -6px 18px rgba(0,0,0,.35);
+  -webkit-transform:translateY(110%);
+  transform:translateY(110%);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .45s ease, transform .45s ease, visibility 0s linear .45s;
+}
+.cta-bar.is-visible{
+  -webkit-transform:translateY(0);
+  transform:translateY(0);
+  opacity:1;
+  visibility:visible;
+  transition:opacity .45s ease, transform .45s ease, visibility 0s;
+}
+
+.cta-bar-btn{
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:1px;
+  min-height:56px;          /* タップしやすい高さを確保 */
+  padding:9px 12px;
+  background:#d6a04f;
+  color:#17130f;
+  text-decoration:none;
+  border-radius:4px;
+  text-align:center;
+}
+.cta-bar-btn:hover{background:#e2ac59;}
+.cta-bar-main{font-size:.88rem; font-weight:700; white-space:nowrap;}
+.cta-bar-sub{font-size:.71rem; font-weight:500; opacity:.8;}
+
+.cta-bar-close{
+  flex:0 0 auto;
+  width:36px;
+  height:36px;
+  border:none;
+  background:transparent;
+  color:#b7ab97;
+  font-size:1.25rem;
+  line-height:1;
+  cursor:pointer;
+}
+.cta-bar-close:hover{color:#ece4d6;}
+
+/* 4秒に1回だけ、わずかに拡大する。透明度は変えないので点滅しない。 */
+@-webkit-keyframes cta-bar-pulse{
+  0%,86%,100%{-webkit-transform:scale(1);}
+  92%{-webkit-transform:scale(1.035);}
+}
+@keyframes cta-bar-pulse{
+  0%,86%,100%{transform:scale(1);}
+  92%{transform:scale(1.035);}
+}
+.cta-bar.is-visible .cta-bar-btn{
+  -webkit-animation:cta-bar-pulse 4s ease-in-out infinite;
+  animation:cta-bar-pulse 4s ease-in-out infinite;
+}
+
+body.has-cta-bar{padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px));}
+
+@media(min-width:641px){
+  .cta-bar{justify-content:center; padding-left:24px; padding-right:24px;}
+  .cta-bar-btn{flex:0 0 auto; min-width:420px;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .cta-bar{transition:opacity .01ms, visibility 0s;}
+  .cta-bar.is-visible .cta-bar-btn{-webkit-animation:none; animation:none;}
+}
