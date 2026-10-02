@@ -156,6 +156,26 @@
   .parking-list span{display:block; font-size:.82rem; color:var(--ink-dim);}
   .parking-note{display:block; margin-top:12px; font-size:.78rem; color:var(--ink-dim); opacity:.85;}
 
+  /* 院長の動画へのテキストリンク */
+  .video-link{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-top:24px;
+    padding:14px 22px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--bg-2);
+    color:var(--ink);
+    font-size:.9rem;
+    font-weight:700;
+    line-height:1.6;
+    text-decoration:none;
+  }
+  .video-link:hover{border-color:var(--amber-dim); background:var(--panel);}
+  .video-link svg{flex:0 0 auto; width:28px; height:20px;}
+  .video-link .meta{font-weight:500; font-size:.8rem; color:var(--ink-dim); white-space:nowrap;}
+
   /* プロフィールの補足 */
   .profile-note{
     margin-top:28px;
@@ -639,6 +659,11 @@
       </div>
     </div>
     <p class="profile-note">以前は月200名以上を施術していましたが、一人ひとりと向き合うため、今は月30名までに絞っています。</p>
+
+    <a class="video-link" href="https://youtu.be/XWmk9ghCdOk" target="_blank" rel="noopener">
+      <svg viewBox="0 0 28 20" aria-hidden="true"><path fill="#FF0000" d="M27.4 3.1A3.5 3.5 0 0 0 24.9.6C22.7 0 14 0 14 0S5.3 0 3.1.6A3.5 3.5 0 0 0 .6 3.1C0 5.3 0 10 0 10s0 4.7.6 6.9a3.5 3.5 0 0 0 2.5 2.5C5.3 20 14 20 14 20s8.7 0 10.9-.6a3.5 3.5 0 0 0 2.5-2.5C28 14.7 28 10 28 10s0-4.7-.6-6.9z"/><path fill="#fff" d="M11.2 14.3 18.5 10l-7.3-4.3z"/></svg>
+      <span>院長から、来院を考えている方へ<span class="meta">(動画・4分)</span></span>
+    </a>
   </div>
 </section>
 
