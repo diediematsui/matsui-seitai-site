@@ -83,6 +83,15 @@
   }
   .google-btn:hover{background:#e2ac59;}
   .google-note{margin-top:18px; font-size:.8rem; color:var(--ink-dim); opacity:.85;}
+  .line-warn{
+    margin-bottom:20px;
+    padding:14px 18px;
+    border-left:3px solid var(--brick);
+    background:rgba(163,70,44,.12);
+    font-size:.86rem;
+    color:var(--ink);
+    line-height:1.8;
+  }
 
   .alt-block{
     margin-top:64px;
@@ -190,8 +199,9 @@
     <div class="google-block">
       <h2 class="google-title">Googleに口コミを書く</h2>
       <p class="google-lead">Googleマップの松井整体院のページが開きます。星の数を選んで、そのままご感想を書いていただけます。</p>
+      <p class="line-warn" id="line-warn" hidden>LINEの中では投稿できないことがあります。右上のメニューから「ブラウザで開く」を押してから、もう一度このボタンを押してください。</p>
       <!-- 投稿リンク: Googleビジネスプロフィールの「クチコミを増やす」で発行される公式リンク(https://g.page/r/.../review)に差し替え可能です -->
-      <a class="google-btn" href="https://search.google.com/local/writereview?placeid=ChIJHWbMGLyR918R3xAVZbW-OAA" target="_blank" rel="noopener">Googleで口コミを書く</a>
+      <a class="google-btn" id="google-review-btn" href="https://search.google.com/local/writereview?placeid=ChIJHWbMGLyR918R3xAVZbW-OAA" target="_blank" rel="noopener">Googleで口コミを書く</a>
       <p class="google-note">Googleアカウントでのログインが必要です。投稿された内容は、そのままGoogleマップ上に公開されます。</p>
     </div>
 
@@ -250,6 +260,26 @@
 </footer>
 
 <script>
+  /* LINEのアプリ内ブラウザ対策:
+     Googleにログインしていないため、そのままでは口コミを投稿できないことがある。
+     LINE内でのみ案内を出し、Androidではリンク先をChromeで開くintent URLに差し替える。 */
+  (function(){
+    var ua = navigator.userAgent || '';
+    if(ua.indexOf('Line/') === -1) return;
+
+    var warn = document.getElementById('line-warn');
+    if(warn) warn.hidden = false;
+
+    if(/Android/i.test(ua)){
+      var btn = document.getElementById('google-review-btn');
+      if(btn){
+        btn.href = 'intent://search.google.com/local/writereview?placeid=ChIJHWbMGLyR918R3xAVZbW-OAA' +
+          '#Intent;scheme=https;package=com.android.chrome;' +
+          'S.browser_fallback_url=https%3A%2F%2Fsearch.google.com%2Flocal%2Fwritereview%3Fplaceid%3DChIJHWbMGLyR918R3xAVZbW-OAA;end';
+      }
+    }
+  })();
+
   (function(){
     var form = document.getElementById('review-form');
     var errorMsg = document.getElementById('form-error');
